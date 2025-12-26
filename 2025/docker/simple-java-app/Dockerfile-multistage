@@ -1,0 +1,12 @@
+# Stage 1: Build stage (full JDK with compiler)
+FROM openjdk:27-ea-slim-trixie AS builder
+WORKDIR /app
+COPY app.java .
+RUN javac app.java
+
+# Stage 2: Runtime stage (minimal JRE only)
+FROM openjdk:27-ea-jre-slim-trixie
+WORKDIR /app
+# Copy only compiled .class file from builder
+COPY --from=builder /app/app.class .
+CMD ["java","app"]

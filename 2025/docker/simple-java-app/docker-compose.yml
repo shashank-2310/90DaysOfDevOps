@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  java-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: java_app_cnt
+    image: java-app:latest
