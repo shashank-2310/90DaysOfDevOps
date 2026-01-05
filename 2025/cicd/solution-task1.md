@@ -1,6 +1,5 @@
 
-# Solution
-### Week 1 — Jenkins CI/CD: Pipeline Basics
+# Solution: Task 1 - Jenkins CI/CD: Pipeline Basics
 
 Objective: Create a basic Jenkins pipeline that builds, tests, and deploys a simple application. Document the pipeline, how to run it, and answer core interview questions for Week 1.
 
